@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.ndev.NuanceSpeechKitPlugin"
-    version="0.1.1">
+    version="0.1.2">
     <name>NuanceSpeechKitPlugin</name>
     <description>Cordova NuanceSpeechKitPlugin Plugin</description>
     <license>Apache 2.0</license>
@@ -12,6 +12,13 @@
         <clobbers target="window.NuanceSpeechKitPlugin" />
     </js-module>
     <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="PhoneGapSpeechPlugin">
+                <param name="ios-package" value="PhoneGapSpeechPlugin" onload="true" />
+            </feature>
+        </config-file>
+
         <header-file src="src/ios/Credentials.h" />
         <header-file src="src/ios/ICredentials.h" />
         <source-file src="src/ios/Credentials.m" />
