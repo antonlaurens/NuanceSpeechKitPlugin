@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.ndev.NuanceSpeechKitPlugin"
-    version="0.1.2">
+    version="0.1.3">
     <name>NuanceSpeechKitPlugin</name>
     <description>Cordova NuanceSpeechKitPlugin Plugin</description>
     <license>Apache 2.0</license>

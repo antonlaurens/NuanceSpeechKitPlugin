@@ -13,7 +13,7 @@ var NuanceSpeechKitPlugin = function() {
 // `sslEnabled`  True if SSL is enabled for the connection  
 // `successCallback`  The callback function for success  
 // `failureCallback`  The callback function for error  
-NuanceSpeechKitPlugin.initialize = function(credentialClassName,
+NuanceSpeechKitPlugin.prototype.initialize = function(credentialClassName,
                                                       serverName, port, sslEnabled,
                                                       successCallback, failureCallback) {
     return exec( successCallback,
@@ -27,7 +27,7 @@ NuanceSpeechKitPlugin.initialize = function(credentialClassName,
 //
 // `successCallback` The callback function for success  
 // `failureCallback` The callback function for error  
-NuanceSpeechKitPlugin.cleanup = function(successCallback, failureCallback) {
+NuanceSpeechKitPlugin.prototype.cleanup = function(successCallback, failureCallback) {
     return exec(successCallback,
                          failureCallback,
                          "PhoneGapSpeechPlugin",
@@ -41,7 +41,7 @@ NuanceSpeechKitPlugin.cleanup = function(successCallback, failureCallback) {
 // `language`  Language code for recognition  
 // `successCallback`  The callback function for success  
 // `failureCallback`  The callback function for error  
-NuanceSpeechKitPlugin.startRecognition = function(recoType, language,
+NuanceSpeechKitPlugin.prototype.startRecognition = function(recoType, language,
                                                             successCallback, failureCallback) {
     return exec(successCallback,
                          failureCallback,
@@ -54,7 +54,7 @@ NuanceSpeechKitPlugin.startRecognition = function(recoType, language,
 //
 // `successCallback`  The callback function for success  
 // `failureCallback`  The callback function for error  
-NuanceSpeechKitPlugin.stopRecognition = function(successCallback, failureCallback) {
+NuanceSpeechKitPlugin.prototype.stopRecognition = function(successCallback, failureCallback) {
     return exec(successCallback,
                          failureCallback,
                          "PhoneGapSpeechPlugin",
@@ -66,7 +66,7 @@ NuanceSpeechKitPlugin.stopRecognition = function(successCallback, failureCallbac
 //
 // `successCallback` The callback function for success  
 // `failureCallback` The callback function for error  
-NuanceSpeechKitPlugin.getResults = function(successCallback, failureCallback) {
+NuanceSpeechKitPlugin.prototype.getResults = function(successCallback, failureCallback) {
     return exec(successCallback,
                          failureCallback,
                          "PhoneGapSpeechPlugin",
@@ -81,7 +81,7 @@ NuanceSpeechKitPlugin.getResults = function(successCallback, failureCallback) {
 // `voice` The voice to be used for TTS playback  
 // `successCallback`  The callback function for success  
 // `failureCallback`  The callback function for error  
-NuanceSpeechKitPlugin.playTTS = function(text, language, voice,
+NuanceSpeechKitPlugin.prototype.playTTS = function(text, language, voice,
                                                    successCallback, failureCallback) {
     return exec(successCallback,
                          failureCallback,
@@ -97,7 +97,7 @@ NuanceSpeechKitPlugin.playTTS = function(text, language, voice,
 // `voice` The voice to be used for TTS playback  
 // `successCallback`  The callback function for success  
 // `failureCallback`  The callback function for error  
-NuanceSpeechKitPlugin.stopTTS = function(successCallback, failureCallback) {
+NuanceSpeechKitPlugin.prototype.stopTTS = function(successCallback, failureCallback) {
     return exec(successCallback,
                          failureCallback,
                          "PhoneGapSpeechPlugin",
