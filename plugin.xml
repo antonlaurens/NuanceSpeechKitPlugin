@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.ndev.NuanceSpeechKitPlugin"
+    version="0.1.0">
+    <name>NuanceSpeechKitPlugin</name>
+    <description>Cordova NuanceSpeechKitPlugin Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,NuanceSpeechKitPlugin</keywords>
+    <js-module src="www/NuanceSpeechKitPlugin.js" name="NuanceSpeechKitPlugin">
+        <clobbers target="window.NuanceSpeechKitPlugin" />
+    </js-module>
+    <!-- android -->
+    <platform name="ios">
+        <header-file src="src/ios/Credentials.h" />
+        <header-file src="src/ios/ICredentials.h" />
+        <source-file src="src/ios/Credentials.m" />
+        <header-file src="src/ios/PhoneGapSpeechPlugin.h" />
+        <source-file src="src/ios/PhoneGapSpeechPlugin.m" />
+    </platform>
+</plugin>
+
